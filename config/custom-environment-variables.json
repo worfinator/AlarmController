@@ -1,0 +1,5 @@
+{
+    "API": {
+        "jwtPrivateKey": "pi_alarm_jwtPrivateKey"
+    }
+}

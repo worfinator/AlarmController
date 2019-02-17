@@ -1,0 +1,23 @@
+{
+    "Common": {
+        "app_name": "PI_Alarm",
+        "device": "alarm_app",
+        "dateFormat": "DD/MM/YYYY HH:mm:ss"
+    },
+    "Pushover": {
+        "apiKey": "",
+        "userKey": "",
+        "sound": "persistent",
+        "priority": 1
+    },
+    "AWS": {
+        "connection": {
+            "keyPath": "certificates/d36f6ce44e-private.pem.key",
+            "certPath": "certificates/d36f6ce44e-certificate.pem.crt",
+            "caPath": "certificates/AmazonRootCA1.pem",
+            "clientId": "alarm_app",
+            "host": "a1z0ml01vrxwtq-ats.iot.us-west-2.amazonaws.com"
+        },
+        "topic": "pi_alarm"
+    }
+}

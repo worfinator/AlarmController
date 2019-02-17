@@ -1,0 +1,1 @@
+const alarm = require('./controllers/alarm');
