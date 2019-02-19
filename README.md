@@ -1,6 +1,6 @@
-# AlarmController
+# AlarmMonitor
 
-AlarmController is a Node.js based application to control [PIFace_Alarm](https://github.com/worfinator/PIFace_Alarm) via a web interface.
+AlarmMonitor is a Node.js based application to view MQTT messages from [PIFace_Alarm](https://github.com/worfinator/PIFace_Alarm) via the console
 
 ## Status
 
@@ -35,7 +35,7 @@ echo export "piface_alarm_poUserKey=PushoverUserKey" >> .bashrc
 
 ## AWS Messaging
 
-Alarm_monitor uses [AWS IOT Core](https://aws.amazon.com/iot-core/) MQTT/Device Shadows in order to communicate events, and allow for remote control. You will need to create an AWS account and set up an IOT device/thing with the name `alarm_app` and copy the certifcates into the [./certificates](.certificates) directory and update the `AWS` object in the [./config/default.json](./config/default.json) file with the certifcate filenames, host, and clientId. Make sure you use the same clientId as the `device/thing` you created `alarm_app`.
+AlarmMonitor uses [AWS IOT Core](https://aws.amazon.com/iot-core/) MQTT/Device Shadows in order to communicate events, and allow for remote control. You will need to create an AWS account and set up an IOT device/thing with the name `alarm_app` and copy the certifcates into the [./certificates](.certificates) directory and update the `AWS` object in the [./config/default.json](./config/default.json) file with the certifcate filenames, host, and clientId. Make sure you use the same clientId as the `device/thing` you created `alarm_app`.
 
 I recommend using a policy with iot:* and resources * for initial setup, and then locking it down once everything is running correctly.
 
@@ -61,5 +61,5 @@ Within the AWS IOT Core console, select the "Test" option to open the MQTT clien
  ## Run
 
 ```bash
- cd AlarmController
+ cd AlarmMonitor
  nodemon index.js
