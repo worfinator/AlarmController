@@ -16,6 +16,7 @@ const shadowAccepted = `$aws/things/${awsConfig.device}/shadow/update/accepted`;
 
 const device = awsIOT.device(connection);
 
+
 device.on('connect', function () {
     console.log('awsIOT.device: connect');
 
@@ -32,8 +33,9 @@ device.on('message', function (topic, payload) {
 
         console.log('awsIOT.device:', topic, message);
 
-        if (topic != awsConfig.topic) {
-            console.log(message.state.reported.status);
+        // Update alarm object if shadow update is received
+        if (topic != awsConfig.topic && message.state.reported.status) {
+            alarm.updateAlarm(message.state.reported.status);
         }
 
     }
