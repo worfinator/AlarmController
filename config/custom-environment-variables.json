@@ -1,5 +1,9 @@
 {
     "API": {
         "jwtPrivateKey": "pi_alarm_jwtPrivateKey"
+    },
+    "Pushover": {
+        "apiKey": "piface_alarm_poApiKey",
+        "userKey": "piface_alarm_poUserKey"
     }
 }
