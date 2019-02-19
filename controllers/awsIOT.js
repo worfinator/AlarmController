@@ -12,7 +12,7 @@ const connection = {
     'host': awsConfig.connection.host
 };
 
-const shadowAccepted = `$aws/things/pi_alarm/shadow/update/accepted`;
+const shadowAccepted = `$aws/things/${awsConfig.device}/shadow/update/accepted`;
 
 const device = awsIOT.device(connection);
 
@@ -32,7 +32,7 @@ device.on('message', function (topic, payload) {
 
         console.log('awsIOT.device:', topic, message);
 
-        if (topic != 'pi_alarm') {
+        if (topic != awsConfig.topic) {
             console.log(message.state.reported.status);
         }
 

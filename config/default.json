@@ -1,6 +1,6 @@
 {
     "Common": {
-        "app_name": "PI_Alarm",
+        "app_name": "AlarmController",
         "device": "alarm_app",
         "dateFormat": "DD/MM/YYYY HH:mm:ss"
     },
@@ -11,6 +11,7 @@
         "priority": 1
     },
     "AWS": {
+        "device": "piface_alarm",
         "connection": {
             "keyPath": "certificates/d36f6ce44e-private.pem.key",
             "certPath": "certificates/d36f6ce44e-certificate.pem.crt",
@@ -18,6 +19,6 @@
             "clientId": "alarm_app",
             "host": "a1z0ml01vrxwtq-ats.iot.us-west-2.amazonaws.com"
         },
-        "topic": "pi_alarm"
+        "topic": "piface_alarm"
     }
 }
