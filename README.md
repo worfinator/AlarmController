@@ -1,6 +1,6 @@
 # AlarmController
 
-AlarmController is a Node.js based application to control PIFace_Alarm via a web interface.
+AlarmController is a Node.js based application to control [PIFace_Alarm](https://github.com/worfinator/PIFace_Alarm) via a web interface.
 
 ## Status
 
