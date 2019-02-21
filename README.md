@@ -1,6 +1,6 @@
 # AlarmMonitor
 
-AlarmMonitor is a Node.js based test application to view/confirm AWS MQTT messages from [PIFace_Alarm](https://github.com/worfinator/PIFace_Alarm) via the console
+AlarmMonitor is a Node.js based test tool to view/confirm AWS MQTT messages from [PIFace_Alarm](https://github.com/worfinator/PIFace_Alarm) via the console
 
 ## Configuration
 
